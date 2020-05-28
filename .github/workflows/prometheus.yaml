@@ -26,15 +26,15 @@ jobs:
         action: publish
         user: tf-autobuilder
         root: build/prometheus
-        name: prometheus-bins:2.18.1.flist
+        name: prometheus-bins-2.18.1.flist
 
     - name: Publish flist
       uses: threefoldtech/publish-flist@master
       with:
         action: merge
         user: tf-autobuilder
-        name: prometheus:2.18.1.flist
-        target: azmy/base.flist tf-autobuilder/prometheus-bins:2.18.1.flist
+        name: prometheus-2.18.1.flist
+        target: azmy/base.flist tf-autobuilder/prometheus-bins-2.18.1.flist
         token: ${{ secrets.HUB_JWT }}
 
     - name: Crosslink flist
@@ -45,4 +45,4 @@ jobs:
         action: crosslink
         user: tf-official-apps
         name: prometheus:latest.flist
-        target: tf-autobuilder/prometheus:latest.flist
+        target: tf-autobuilder/prometheus-2.18.1.flist
