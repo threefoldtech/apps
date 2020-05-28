@@ -28,11 +28,11 @@ jobs:
         root: build/prometheus
         name: prometheus-bins.flist
 
-      - name: Publish flist
-        uses: threefoldtech/publish-flist@master
-        with:
-          action: merge
-          user: azmy
-          name: prometheus.flist
-          target: azmy/base.flist azmy/prometheus-bins.flist
-          token: ${{ secrets.HUB_TOKEN }}
+    - name: Publish flist
+      uses: threefoldtech/publish-flist@master
+      with:
+        action: merge
+        user: azmy
+        name: prometheus.flist
+        target: azmy/base.flist azmy/prometheus-bins.flist
+        token: ${{ secrets.HUB_TOKEN }}
