@@ -1,0 +1,2 @@
+exec: sh /etc/zinit/init/hostkey.sh
+oneshot: true

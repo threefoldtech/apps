@@ -1,0 +1,1 @@
+exec: prometheus --config.file /etc/prometheus.yml --storage.tsdb.path /data
