@@ -1,0 +1,12 @@
+[startup]
+
+[startup.entry]
+name = "core.system"
+
+[startup.entry.args]
+dir = "/"
+args = ["init"]
+name = "zinit"
+
+[startup.entry.args.env]
+PATH = "/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin"
