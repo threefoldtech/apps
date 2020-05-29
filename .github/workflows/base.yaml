@@ -45,4 +45,4 @@ jobs:
         action: crosslink
         user: tf-official-apps
         name: base:latest.flist
-        target: tf-autobuilder/${{ steps.setname.outputs.build }}.flist
+        target: tf-autobuilder/${{ steps.setname.outputs.build }}
