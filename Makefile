@@ -4,4 +4,4 @@ base:
 prometheus:
 	$(MAKE) -C prometheus archive=$(archive)
 
-.PHONY: prometheus
+.PHONY: prometheus base
