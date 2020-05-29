@@ -1,4 +1,4 @@
-name: Release (development)
+name: Prometheus
 on:
   push:
     paths:

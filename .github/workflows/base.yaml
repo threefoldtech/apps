@@ -1,4 +1,4 @@
-name: Release (development)
+name: Base
 on:
   push:
     paths:
@@ -20,7 +20,7 @@ jobs:
 
     - name: Build binaries
       run: |
-        make prometheus archive=${{ github.workspace }}/build/base
+        make base archive=${{ github.workspace }}/build/base
 
     - name: Set name of the development build
       id: setname
