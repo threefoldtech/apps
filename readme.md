@@ -4,7 +4,7 @@
 This repo has workflows to auto build some flists.
 
 # The base image
-The base image actually uses docker file to build, then its up to you to push it docker hub, and then import it to hub.grid.tf. The reason it's not automated is that the publis-flist action plugin does not support importing from hub.docker atm. The can be changed later once it's possible.
+Base image provide the basic image, runs zinit and start `dropbear` by default. For more information please check [here](base/readme.md)
 
 ## Idea
 the base image is an alpine base image with zinit and sshd pre configured. One started by itself you get ssh out of the box and capabilities of zinit as a process manager. The other builders (in this repo or different repos) can use this as a base image to add their own services.
