@@ -1,7 +1,7 @@
 FROM ubuntu:latest
 
-RUN apk-get udpate
-RUN apt-get install dropbear-bin
+RUN apt-get update
+RUN apt-get install -y dropbear-bin
 RUN rm -rf /var/cache/apt
 RUN apt-get clean
 

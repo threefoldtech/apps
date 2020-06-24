@@ -1,4 +1,4 @@
-name: Base
+name: Base Ubuntu
 on:
   push:
     paths:
