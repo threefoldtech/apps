@@ -20,7 +20,7 @@ jobs:
 
     - name: Build binaries
       run: |
-        make base archive=${{ github.workspace }}/build/base
+        make base-ubuntu archive=${{ github.workspace }}/build/base
 
     - name: Set name of the development build
       id: setname
