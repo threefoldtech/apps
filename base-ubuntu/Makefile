@@ -3,12 +3,11 @@ img=base
 all: build
 
 build: extract
-	cp startup.toml $(archive)/.startup.toml
-	cp readme.md $(archive)/.README.md
-	sudo chown -R root:root $(archive)
+	sudo cp startup.toml $(archive)/.startup.toml
+	sudo cp readme.md $(archive)/.README.md
 
 extract: docker
-	sh ../utils/extract-img.sh $(img) $(archive)
+	sudo sh ../utils/extract-img.sh $(img) $(archive)
 
 # build docker image with Dockerfile
 docker: zinit
