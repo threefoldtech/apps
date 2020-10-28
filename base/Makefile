@@ -5,6 +5,7 @@ all: build
 build: extract
 	cp startup.toml $(archive)/.startup.toml
 	cp readme.md $(archive)/.README.md
+	chown -R root:root $(archive)
 
 extract: docker
 	sh ../utils/extract-img.sh $(img) $(archive)
