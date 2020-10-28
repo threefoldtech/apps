@@ -1,2 +1,3 @@
 exec: sh /etc/zinit/init/userkey.sh
 oneshot: true
+log: stdout
