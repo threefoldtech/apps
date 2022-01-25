@@ -1,8 +1,10 @@
 FROM alpine:latest
 
-RUN apk add dropbear
-RUN mkdir /etc/dropbear
+RUN apk add openssh-server && \
+    wget -O /sbin/zinit https://github.com/threefoldtech/zinit/releases/download/v0.2.5/zinit && \
+    chmod +x /sbin/zinit && \
+    passwd -d root
+
 COPY rootfs /
-ADD tmp/zinit /sbin/zinit
 
 ENTRYPOINT [ "zinit", "init" ]

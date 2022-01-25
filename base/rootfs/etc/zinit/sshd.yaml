@@ -1,2 +1,6 @@
-exec: dropbear -R -F -g
+exec: |
+  sh -c "
+    ssh-keygen -A
+    exec /usr/sbin/sshd -D
+  "
 log: stdout
