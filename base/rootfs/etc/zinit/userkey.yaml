@@ -1,3 +1,11 @@
-exec: sh /etc/zinit/init/userkey.sh
+exec: |
+  sh -c '
+    if [ -n "${SSH_KEY}" ]
+    then
+        mkdir -p "${HOME}/.ssh"
+        keys="${HOME}/.ssh/authorized_keys"
+        grep "$SSH_KEY" ${keys} || echo ${SSH_KEY} >> $keys
+    fi
+  '
 oneshot: true
 log: stdout
